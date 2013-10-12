@@ -1,0 +1,60 @@
+doctype 5
+html
+  head
+    script(src='http://d3js.org/d3.v3.min.js', charset='utf-8')
+    script(src='javascripts/underscore/underscore-min.js')
+    
+    //- visualizations 
+    script(src='javascripts/Visualizations/Barchart.js')
+    script(src='javascripts/Visualizations/StackedBarChart.js')
+    script(src='javascripts/Visualizations/MultiHistogram.js')
+    script(src='javascripts/Utils/jshashtable-3.0.js')
+    script(src='javascripts/Utils/jshashset-3.0.js')
+    script(src='javascripts/Utils/jscolor/jscolor.js')    
+    script(src='javascripts/jquery/jquery.min.js')
+    script(src='javascripts/JCrop/jquery.Jcrop.js')
+    script(src='javascripts/klass/klass.min.js')
+    script(src='javascripts/pixastic/pixastic.core.js')
+    script(src='javascripts/pixastic/pixastic.jquery.js')
+    script(src='javascripts/pixastic/actions/blur.js')
+    script(src='javascripts/pixastic/actions/crop.js')
+    script(src='javascripts/pixastic/actions/centroid.js')    
+    
+    //- immuno histochemistry image analysis library you are building 
+    script(src='javascripts/ImmunoEye/ImmunoEye.js')
+    
+    //- All the custom JS stuff 
+    script(src='javascripts/immunoImageAnalysis/FileSystem.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/results/Results.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/results/implementations/IntensityByDistanceResults.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/Visualizations/IntensityByDistanceVisualization.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/editor/Editor.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/Task.js')
+    
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/implementations/CentroidSurfaceTask.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/results/implementations/CentroidSurfaceResults.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/Visualizations/CentroidSurfaceDistanceVisualization.js')
+
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/implementations/IntensityByDistanceTask.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/editor/implementations/PaintObjectEditor.js')
+
+    script(src='javascripts/immunoImageAnalysis/imageProject/task/implementations/TailsTask.js')
+    
+    script(src='javascripts/immunoImageAnalysis/imageProject/ImageProject.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/imageGroup/EnrichedImage.js')
+    script(src='javascripts/immunoImageAnalysis/imageProject/imageGroup/ImageGroup.js')
+    script(src='javascripts/immunoImageAnalysis/Main.js')    
+    link(rel='stylesheet', type='text/css', href='javascripts/style.css')
+    link(rel='stylesheet', type='text/css', href='javascripts/immunoImageAnalysis/imageProject/task/editor/Editor.css')
+    link(rel='stylesheet', type='text/css', href='javascripts/immunoImageAnalysis/imageProject/task/results/Results.css')
+    body
+        div(class="centerWrapper")    
+            div(class="header")
+                if user !== null
+                    h1 MetaScopics
+                    a(href="/logout") logout
+                else 
+                    h1 BOOGIE
+                    a(href="/login") login
+            block content
+

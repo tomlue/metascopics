@@ -1,0 +1,40 @@
+.results{
+	float:left;
+	white-space: nowrap;	
+	padding:2px;
+	background-color:#3366CC;		
+	border-width:2px;
+	max-width:784px;
+	min-width:784px;
+	min-height:300px;
+	display:block;	
+}
+
+.results a{
+	float:left;
+	cursor:pointer;
+	height:20px;
+	width:150px;
+}
+
+.results svg{
+	background-color:white;
+	float:left;
+}
+
+.bar {
+  fill: maroon;
+  shape-rendering: crispEdges;
+}
+
+.line {
+	fill: none;
+	stroke: #000;
+	stroke-width: 1.5px;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
